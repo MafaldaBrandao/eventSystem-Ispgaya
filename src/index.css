@@ -1,0 +1,38 @@
+@font-face {
+  font-family: 'Open Sans';
+  src: url('./assets/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-mu0SC55I.woff2')
+    format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('./assets/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTVOmu0SC55K5gw.woff2')
+    format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-body: 'Open Sans';
+  --font-heading: 'Libre Baskerville';
+  line-height: 1.5;
+  tab-size: 4;
+}
+
+::selection {
+  background: #fb923c;
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background: #fb923c;
+  color: #ffffff;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

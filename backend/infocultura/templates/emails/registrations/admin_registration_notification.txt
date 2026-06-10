@@ -1,0 +1,9 @@
+Foi recebida uma nova inscricao.
+
+Destino: {{ scope_label }}
+Nome: {{ attendee_name }}
+Email: {{ attendee_email }}
+Telefone: {{ phone|default:"Sem telefone" }}
+Mensagem: {{ message|default:"Sem mensagem adicional" }}
+
+InfoCultura

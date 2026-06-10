@@ -1,0 +1,5 @@
+Olá {{ attendee_name }},
+
+O estado da tua inscrição em {{ club_name }} mudou para {{ status }}.
+
+InfoCultura

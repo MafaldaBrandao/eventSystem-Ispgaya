@@ -1,0 +1,8 @@
+{{ subject }}
+
+{% if image_url %}[Imagem: {{ image_url }}]
+
+{% endif %}{{ body }}
+
+---
+Enviado por {{ from_name }} <{{ from_email }}>

@@ -1,0 +1,55 @@
+{% extends "emails/base_email.html" %}
+
+{% block email_subtitle %}Inscrição em Atividade{% endblock %}
+
+{% block email_title %}
+  {% if status == "waitlist" %}
+    Lista de espera na {{ label }} {{ activity_title }}
+  {% else %}
+    Inscrição confirmada na {{ label }} {{ activity_title }}
+  {% endif %}
+{% endblock %}
+
+{% block email_content %}
+  <div style="padding:32px; background:#ffffff;">
+    <p style="margin:0; font-size:16px; line-height:1.8; color:#111827;">
+      Olá <strong>{{ attendee_name }}</strong>,
+    </p>
+    
+    <p style="margin:16px 0 0; font-size:16px; line-height:1.8; color:#111827;">
+      {% if status == "waitlist" %}
+        A tua inscrição ficou em <strong>lista de espera</strong>.
+      {% else %}
+        A tua inscrição foi <strong>confirmada automaticamente</strong>.
+      {% endif %}
+    </p>
+
+    <div style="margin:24px 0; padding:20px; border:1px solid #e5e7eb; border-radius:14px; background:#f8fafc;">
+      <div style="font-size:12px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#64748b; border-bottom:1px solid #e5e7eb; padding-bottom:6px; margin-bottom:12px;">
+        Detalhes da Atividade
+      </div>
+      <table style="width:100%; font-size:14px; line-height:1.6; color:#1f2937; border-collapse:collapse;">
+        <tr>
+          <td style="padding:4px 0; font-weight:600; width:100px; vertical-align:top;">{{ label }}:</td>
+          <td style="padding:4px 0; color:#0f172a;">{{ activity_title }}</td>
+        </tr>
+        <tr>
+          <td style="padding:4px 0; font-weight:600; vertical-align:top;">Clube:</td>
+          <td style="padding:4px 0; color:#0f172a;">{{ club_name }}</td>
+        </tr>
+        <tr>
+          <td style="padding:4px 0; font-weight:600; vertical-align:top;">Data:</td>
+          <td style="padding:4px 0; color:#0f172a;">{{ start_date_str }}</td>
+        </tr>
+        <tr>
+          <td style="padding:4px 0; font-weight:600; vertical-align:top;">Local:</td>
+          <td style="padding:4px 0; color:#0f172a;">{{ location }}</td>
+        </tr>
+      </table>
+    </div>
+
+    <p style="margin:0; font-size:15px; line-height:1.8; color:#475569;">
+      Obrigado pelo teu interesse na nossa atividade!
+    </p>
+  </div>
+{% endblock %}

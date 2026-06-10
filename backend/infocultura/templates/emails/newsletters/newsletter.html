@@ -1,0 +1,17 @@
+{% extends "emails/base_email.html" %}
+
+{% block email_subtitle %}InfoCultura Newsletter{% endblock %}
+
+{% block email_content %}
+  {% if image_url %}
+    <div style="background:#ffffff; border-bottom:1px solid #e5e7eb; text-align:center;">
+      <img src="{{ image_url }}" alt="{{ subject }}" style="display:inline-block; max-width:100%; height:auto; max-height:300px; width:auto;" />
+    </div>
+  {% endif %}
+
+  <div style="padding:32px; background:#ffffff;">
+    <div style="font-size:16px; line-height:1.8; color:#111827; white-space:normal;">
+      {{ body|linebreaksbr }}
+    </div>
+  </div>
+{% endblock %}

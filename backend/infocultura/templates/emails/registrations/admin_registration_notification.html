@@ -1,0 +1,48 @@
+{% extends "emails/base_email.html" %}
+
+{% block email_subtitle %}Notificação de Inscrição{% endblock %}
+{% block email_title %}{{ subject }}{% endblock %}
+
+{% block email_content %}
+  <div style="padding:32px; background:#ffffff;">
+    <p style="margin:0; font-size:16px; line-height:1.8; color:#111827;">
+      Foi recebida uma nova inscrição na plataforma.
+    </p>
+
+    <div style="margin:24px 0; padding:20px; border:1px solid #e5e7eb; border-radius:14px; background:#f8fafc;">
+      <div style="font-size:12px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#64748b; border-bottom:1px solid #e5e7eb; padding-bottom:6px; margin-bottom:12px;">
+        Informações do Candidato
+      </div>
+      <table style="width:100%; font-size:14px; line-height:1.6; color:#1f2937; border-collapse:collapse;">
+        <tr>
+          <td style="padding:4px 0; font-weight:600; width:100px; vertical-align:top;">Destino:</td>
+          <td style="padding:4px 0; color:#0f172a; font-weight:600;">{{ scope_label }}</td>
+        </tr>
+        <tr>
+          <td style="padding:4px 0; font-weight:600; vertical-align:top;">Nome:</td>
+          <td style="padding:4px 0; color:#0f172a;">{{ attendee_name }}</td>
+        </tr>
+        <tr>
+          <td style="padding:4px 0; font-weight:600; vertical-align:top;">Email:</td>
+          <td style="padding:4px 0; color:#0f172a;">
+            <a href="mailto:{{ attendee_email }}" style="color:#0f172a; text-decoration:underline;">{{ attendee_email }}</a>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:4px 0; font-weight:600; vertical-align:top;">Telefone:</td>
+          <td style="padding:4px 0; color:#0f172a;">{{ phone|default:"Sem telefone" }}</td>
+        </tr>
+        <tr>
+          <td style="padding:4px 0; font-weight:600; vertical-align:top;">Mensagem:</td>
+          <td style="padding:4px 0; color:#0f172a; white-space:pre-wrap;">{{ message|default:"Sem mensagem adicional" }}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+{% endblock %}
+
+{% block email_footer_note %}
+  <p style="margin:6px 0 0;">
+    Este é um email automático de notificação enviado aos administradores do clube.
+  </p>
+{% endblock %}

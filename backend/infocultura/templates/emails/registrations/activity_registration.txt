@@ -1,0 +1,11 @@
+Olá {{ attendee_name }},
+
+{% if status == "waitlist" %}A tua inscrição ficou em lista de espera.{% else %}A tua inscrição foi confirmada automaticamente.{% endif %}
+
+{{ label }}: {{ activity_title }}
+Clube: {{ club_name }}
+Data: {{ start_date_str }}
+Local: {{ location }}
+
+Obrigado pelo teu interesse.
+InfoCultura
