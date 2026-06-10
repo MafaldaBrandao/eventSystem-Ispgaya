@@ -38,3 +38,7 @@ node_modules/
 
 
 /dist-tests/
+
+# IDEs
+.idea/
+.trae/
