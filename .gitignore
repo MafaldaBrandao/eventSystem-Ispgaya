@@ -42,3 +42,26 @@ node_modules/
 # IDEs
 .idea/
 .trae/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Local cookies and sessions
+cookies.txt
+*.cookies
+
+# Local databases
+*.sqlite
+*.sqlite3
+*.db
+*.sbd
+
+# OCR/local imports
+faturas_ocr/
+importdb/
+
+# Logs
+*.log
+logs/
