@@ -70,6 +70,10 @@ INFOCULTURA_ADMIN_USER=admin
 INFOCULTURA_ADMIN_EMAIL=admin@ispgaya.pt
 INFOCULTURA_ADMIN_PASS=...
 
+INFOCULTURA_JWT_SECRET=your_jwt_secret_here
+INFOCULTURA_ADMIN_USER=admin
+INFOCULTURA_ADMIN_EMAIL=admin@example.com
+INFOCULTURA_ADMIN_PASS=your_admin_password_here
 
 EMAIL_BACKEND=django.core.mail.backends.smtp.EmailBackend
 EMAIL_HOST=
